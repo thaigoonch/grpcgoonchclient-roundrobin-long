@@ -1,6 +1,6 @@
 module github.com/thaigoonch/grpcgoonch-headless-long-client-roundrobin
 
-go 1.17
+go 1.23
 
 require (
 	github.com/grpc-ecosystem/go-grpc-prometheus v1.2.0

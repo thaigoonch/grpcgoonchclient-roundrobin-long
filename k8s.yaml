@@ -5,7 +5,7 @@ metadata:
   labels:
     app: grpcgoonch-headless-long-client-roundrobin
 spec:
-  schedule: "0/8 * * * *"
+  schedule: '0/8 * * * *'
   jobTemplate:
     metadata:
       labels:
@@ -14,12 +14,12 @@ spec:
       template:
         spec:
           containers:
-          - name: grpcgoonch-headless-long-client-roundrobin
-            image: thaigoonch/grpcgoonch-headless-long-client-roundrobin:1.3
-            imagePullPolicy: IfNotPresent
-            env:
-            - name: LOG_LEVEL
-              value: "DEBUG"
+            - name: grpcgoonch-headless-long-client-roundrobin
+              image: thaigoonch/grpcgoonch-headless-long-client-roundrobin:0.0
+              imagePullPolicy: IfNotPresent
+              env:
+                - name: LOG_LEVEL
+                  value: 'DEBUG'
           restartPolicy: Never
           nodeSelector:
-            goonchrole: "nonserver"
+            goonchrole: 'nonserver'
